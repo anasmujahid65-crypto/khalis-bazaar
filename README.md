@@ -1,4 +1,4 @@
-# Khalis Bazaar
+# KHALIS BAZAAR
 
 Website built and deployed via **PromptForge**.
 
