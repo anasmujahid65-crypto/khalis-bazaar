@@ -1,17 +1,17 @@
 /* PROMPTFORGE UNIVERSAL TEMPLATE ARCHITECTURE - KHALIS BAZAAR */
 :root {
   /* Brand Accent Colors */
-  --pf-primary: #C6FF00;
-  --pf-secondary: #FF1F7A;
+  --pf-primary: #3B82F6;
+  --pf-secondary: #06B6D4;
   
   /* Surface & Background */
-  --pf-bg: #0A0A0F;
-  --pf-surface: #0F0F14;
+  --pf-bg: #070D18;
+  --pf-surface: #0F172A;
   --pf-surface-hover: #181822;
   --pf-border: #3A3A42;
 
   /* Typography Colors */
-  --pf-text: #FFFFFF;
+  --pf-text: #F8FAFC;
   --pf-text-muted: #A8A8B0;
 
   /* Layout Variables */
