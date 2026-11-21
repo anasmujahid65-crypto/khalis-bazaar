@@ -1,90 +1,431 @@
-/* PROMPTFORGE UNIVERSAL TEMPLATE ARCHITECTURE - KHALIS BAZAAR */
+/* ==========================================================================
+   KHALIS BAZAAR — BESPOKE ARTISANAL HARVEST DESIGN SYSTEM
+   Crafted for Pure Raw Pakistani Mountain Organics (Swat, Karak, Chitral)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 :root {
-  /* Brand Accent Colors */
-  --pf-primary: #3B82F6;
-  --pf-secondary: #06B6D4;
-  
-  /* Surface & Background */
-  --pf-bg: #070D18;
-  --pf-surface: #0F172A;
-  --pf-surface-hover: #181822;
-  --pf-border: #3A3A42;
+  /* PromptForge Studio Customizer Dynamic Color Hooks */
+  --pf-primary: #24C9A1;
+  --pf-secondary: #3B82F6;
+  --pf-bg: #101214;
+  --pf-surface: #191D20;
+  --pf-text: #F4F3EF;
 
-  /* Typography Colors */
-  --pf-text: #F8FAFC;
-  --pf-text-muted: #A8A8B0;
 
-  /* Layout Variables */
-  --pf-radius: 4px;
-  --pf-radius-sm: 2px;
-  --pf-font-heading: 'Bebas Neue', 'Anton', sans-serif;
-  --pf-font-body: 'Barlow Condensed', 'Inter', sans-serif;
+  /* Brand Palette: Raw Honey, Mountain Pine, Warm Earth & Parchment */
+  --color-primary: var(--pf-primary, #D4841A);
+  --color-primary-hover: #BF7212;
+  --color-primary-active: #A8620D;
+  --color-primary-subtle: rgba(212, 132, 26, 0.12);
+  --color-primary-border: rgba(212, 132, 26, 0.35);
+
+  --color-accent: var(--pf-secondary, #2E7D47);
+  --color-accent-hover: #25663A;
+  --color-accent-subtle: rgba(46, 125, 71, 0.14);
+  --color-accent-border: rgba(46, 125, 71, 0.35);
+
+  /* Deep Earth & Mountain Soil Surfaces */
+  --bg-canvas: var(--pf-bg, #0C100D);
+  --bg-surface: #131915;
+  --bg-card: var(--pf-surface, #18211C);
+  --bg-card-hover: #1E2923;
+  --bg-elevated: #222E27;
+
+  /* Natural Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-honey: rgba(212, 132, 26, 0.3);
+  --border-forest: rgba(46, 125, 71, 0.35);
+
+  /* Warm Organic Typography Colors */
+  --text-main: var(--pf-text, #F7F5EE);
+  --text-secondary: #CBD5CB;
+  --text-muted: #8E9C91;
+  --text-honey: #F5A638;
+  --text-forest: #4ADE80;
+
+  /* Typography Stacks */
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Radius System */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  /* Elevation Shadows */
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --shadow-card-hover: 0 14px 34px -4px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(212, 132, 26, 0.32), 0 0 20px -4px rgba(212, 132, 26, 0.12);
+  --shadow-button: 0 2px 8px rgba(212, 132, 26, 0.28);
+}
+
+/* Reset & Global Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  background-color: var(--pf-bg);
-  color: var(--pf-text);
-  font-family: var(--pf-font-body);
+  background-color: var(--bg-canvas) !important;
+  color: var(--text-main) !important;
+  font-family: var(--font-sans) !important;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Typography Classes */
 .font-heading {
-  font-family: var(--pf-font-heading);
+  font-family: var(--font-serif) !important;
+  letter-spacing: -0.015em;
+  font-optical-sizing: auto;
 }
 
 .font-body {
-  font-family: var(--pf-font-body);
+  font-family: var(--font-sans) !important;
 }
 
-/* Gritty Streetwear & Neon Accents */
-.text-stroke-lime {
-  -webkit-text-stroke: 2px var(--pf-primary);
-  color: transparent;
+/* Tactile Surface Cards */
+.organic-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.22s ease,
+              border-color 0.22s ease,
+              box-shadow 0.22s ease;
+  position: relative;
 }
 
-.text-stroke-pink {
-  -webkit-text-stroke: 2px var(--pf-secondary);
-  color: transparent;
+.organic-card:hover {
+  border-color: var(--border-honey);
+  background: var(--bg-card-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
 }
 
-.skew-panel {
-  transform: skew(-6deg);
+/* Subtle Organic Canvas Grain / Ambient Glow */
+.organic-texture {
+  background-image: radial-gradient(circle at 50% -20%, rgba(212, 132, 26, 0.1), transparent 70%);
 }
 
-.unskew {
-  transform: skew(6deg);
+.organic-texture-forest {
+  background-image: radial-gradient(circle at 50% 0%, rgba(46, 125, 71, 0.1), transparent 65%);
 }
 
-/* Continuous Marquee Animation */
-@keyframes pf-marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+/* Bespoke Button System: Primary, Secondary, Ghost, WhatsApp */
+.btn-primary, .btn-honey {
+  background: linear-gradient(135deg, #DE8B1D 0%, #BA6E10 100%) !important;
+  color: #0C100D !important;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border: 1px solid #EB9D34;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-button);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.18s ease,
+              background 0.18s ease,
+              border-color 0.18s ease;
+  user-select: none;
 }
 
-.animate-marquee {
+.btn-primary:hover, .btn-honey:hover {
+  background: linear-gradient(135deg, #EFA034 0%, #CA7B1A 100%) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(212, 132, 26, 0.4);
+  color: #070908 !important;
+}
+
+.btn-primary:active, .btn-honey:active {
+  transform: scale(0.98) translateY(1px);
+  box-shadow: 0 1px 4px rgba(212, 132, 26, 0.2);
+}
+
+.btn-secondary, .btn-forest {
+  background: rgba(30, 48, 36, 0.75) !important;
+  border: 1px solid var(--border-forest);
+  color: var(--text-main) !important;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.btn-secondary:hover, .btn-forest:hover {
+  background: rgba(40, 65, 48, 0.95) !important;
+  border-color: rgba(74, 222, 128, 0.6);
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active, .btn-forest:active {
+  transform: scale(0.98);
+}
+
+.btn-ghost {
+  background: transparent !important;
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary) !important;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: var(--color-primary-border);
+  color: var(--text-main) !important;
+}
+
+.btn-ghost:active {
+  transform: scale(0.98);
+}
+
+.btn-whatsapp {
+  background: rgba(30, 60, 42, 0.8) !important;
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  color: #4ADE80 !important;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.btn-whatsapp:hover {
+  background: rgba(40, 80, 56, 0.95) !important;
+  border-color: rgba(74, 222, 128, 0.6);
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+}
+
+/* Accessibility Focus States */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Provenance / Certification Badges */
+.badge-provenance, .badge-harvest {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  background: var(--color-primary-subtle);
+  border: 1px solid var(--color-primary-border);
+  color: var(--text-honey);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge-pure, .badge-lab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  background: var(--color-accent-subtle);
+  border: 1px solid var(--color-accent-border);
+  color: var(--text-forest);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge-cod {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+/* Interactive Weight / Variant Chips */
+.weight-chip {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.weight-chip:hover {
+  border-color: var(--color-primary-border);
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.weight-chip.active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  color: var(--text-honey);
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px var(--color-primary);
+}
+
+/* Nav Links with Organic Indicator */
+.nav-link {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.4rem 0;
+  transition: color 0.18s ease;
+  position: relative;
+  white-space: nowrap !important;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--text-honey);
+}
+
+.nav-link.active {
+  color: var(--text-honey);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #D4841A, #F5A638);
+  border-radius: 2px;
+}
+
+/* Toast Notification (Tactile Floating Banner) */
+#kb-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
   display: flex;
-  width: 200%;
-  animation: pf-marquee 22s linear infinite;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.35rem;
+  background: #17221B;
+  border: 1px solid var(--border-honey);
+  border-radius: var(--radius-lg);
+  color: var(--text-main);
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 132, 26, 0.18);
+  transform: translateY(120%);
+  opacity: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  pointer-events: none;
 }
 
-.animate-marquee:hover {
-  animation-play-state: paused;
+#kb-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
-/* Custom Scrollbar */
+/* Bespoke Form Controls */
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+  color: #6C7A70;
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Minimal Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #0A0A0F;
+  background: var(--bg-canvas);
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #3A3A42;
-  border-radius: 3px;
+  background: #222D26;
+  border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--pf-primary);
+  background: var(--color-primary);
 }
