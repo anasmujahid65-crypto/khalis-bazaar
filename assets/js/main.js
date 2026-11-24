@@ -254,7 +254,7 @@ window.KHALIS_CATALOG = [
     "categoryLabel": "Ajwa Dates",
     "price": 2500,
     "comparePrice": 3000,
-    "badge": "Fresh Harvest 2029",
+    "badge": "Fresh Harvest ",
     "tag": "Mountain Orchardsdafasdf",
     "rating": "★ 5.0 (New)",
     "batch": "Batch #PROD-4620",
@@ -271,6 +271,11 @@ window.KHALIS_CATALOG = [
         "label": "500g",
         "price": 2500,
         "weight": "500g Jar"
+      },
+      {
+        "label": "New Size",
+        "price": 2500,
+        "weight": "Custom Weight"
       }
     ],
     "richDetails": "<h2>Pure Handcrafted Harvest</h2><p>Describe the origin, harvesting methods, and purity certifications of your new product here.</p>",
