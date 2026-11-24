@@ -273,9 +273,9 @@ window.KHALIS_CATALOG = [
         "weight": "500g Jar"
       },
       {
-        "label": "New Size",
-        "price": 2500,
-        "weight": "Custom Weight"
+        "label": "1kg",
+        "price": 4500,
+        "weight": "1kg Pack"
       }
     ],
     "richDetails": "<h2>Pure Handcrafted Harvest</h2><p>Describe the origin, harvesting methods, and purity certifications of your new product here.</p>",
